@@ -1,0 +1,13 @@
+{
+  "name": "platzishop",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "https://github.com/twbs/bootstrap.git#v4-dev",
+    "jquery": "~2.1.4",
+    "components-font-awesome": "~4.4"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  }
+}
