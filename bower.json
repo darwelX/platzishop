@@ -2,7 +2,7 @@
   "name": "platzishop",
   "private": true,
   "dependencies": {
-    "bootstrap": "https://github.com/twbs/bootstrap.git#v4-dev",
+    "bootstrap": "4.0",
     "jquery": "~2.1.4",
     "components-font-awesome": "~4.4"
   },

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>platzishop</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header-container">
+        <!-- container es un div que se adapta a distintos tamaños de dispositivos, es un basico componente de bootstrap-->
+        <!-- clase container esta clase crea un div centrado alineado con padding a la izquierda y derecha -->
+        <!-- clase container-fluid esta clase cre un div que ocupa todo el ancho de la pagina -->
+        <div class="container">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-3">
+                    <h1>Platzishop</h1> 
+                </div>
+                <div class="col-3 text-right">
+                    <button class="navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#navMenu">
+                        &#9776;
+                    </button>
+                    <a class="login hidden-sm-down text-uppercase font-weight-bold" href="#">Login</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /Header -->
+
+    <!-- Menu -->
+    <div id="menu-container">
+        <nav class="navbar navbar-toggleable navbar-light bg-faded">
+            <div class="navbar-collapse collapse" id="navMenu">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-10 offset-1 col-sm-6 offset-sm-3 col-md-4 offset-md-0">
+                            <ul class="navbar-nav">
+                                <li class="nav-item text-center">
+                                    <a href="index.html" class="nav-link">Home</a>
+                                </li>
+                                <li class="nav-item text-center">
+                                    <a href="oferta.html" class="nav-link active">Catálogo</a>
+                                </li>
+                                <li class="nav-item text-center">
+                                    <a href="#" class="nav-link">Carrito</a>
+                                </li>
+                                <li class="nav-item text-center hidden-sm-up">
+                                    <a href="#" class="nav-link">Login</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-6 offset-md-2">
+                            <form action="" class="form-inline d-inline w-100 hidden-sm-down">
+                                <div class="input-group">
+                                    <input id="search" type="text" class="form-control search-icon" placeholder="¿Encontraste lo que buscabas?">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-platzi" type="button">
+                                            <!-- la clase hidden-sm-down lo oculta desde small hasta extra small  -->
+                                            <span class="hidden-sm-down">Buscar</span>
+                                            <!-- la clase hidden-md-up lo oculta desde tamaño mediano hasta extra largo -->
+                                            <i class="fa fa-search hidden-md-up"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="search-bar" class="container hidden-md-up">
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <form action="">
+                        <div class="input-group">
+                            <form action="" class="form-inline">
+                                <input type="text" class="form-control search-icon" placeholder="¿Encontraste lo que buscabas?">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-platzi" type="button">
+                                        <!-- la clase hidden-md-up lo oculta desde tamaño mediano hasta extra largo -->
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </form>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Menu -->
+
+    <!-- Breadcrumbs -->
+    <section id="breadcrumbs-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-">
+                    <nav class="breadcrumb">
+                        <a href="" class="breadcrumb-item">Catálogo</a>
+                        <span class="breadcrumb-item active">Todos los productos</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Breadcrumbs -->
+
+    <!--Productos -->
+    <section id="productos-container">
+        <div class="container">
+            <div class="row">
+                <!-- Filtros -->
+                <div class="col-12 col-md-3">
+                    <div class="list-group filtros-toggle hidden-sm-up">
+                        <a href="#" id="filtrosToggle" class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#filtros-container">
+                            <h5 class="list-group-item-heading">
+                                Filtros
+                                <i class="fa fa-chevron-down pull-right"></i>
+                            </h5>
+                        </a>
+                    </div>
+                    <div id="filtros-container" class="navbar-collapse collapse">
+                        <div class="list-group">
+                            <a href="#" class="list-group-item list-group-item-action active">
+                                <h5 class="mb-1">Categoria</h5>
+                            </a>
+                            <a href="" class="list-group-item list-group-item-action justify-content-between">
+                                Ropa
+                                <span class="badge badge-pill badge-default">174</span>
+                            </a>
+                            <a href="" class="list-group-item list-group-item-action justify-content-between">
+                                Tecnologia
+                                <span class="badge badge-pill badge-default">100</span>
+                            </a> 
+                            <a href="" class="list-group-item list-group-item-action justify-content-between">
+                                Accesorios
+                                <span class="badge badge-pill badge-default">120</span>
+                            </a>                        
+                        </div>
+                        <div class="list-group">
+                            <a href="" class="list-group-item list-group-item-action active">
+                                <h5 class="mb-1">Color</h5>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-success justify-content-between">
+                                Verde
+                                <span class="badge badge-pill badge-default">1</span>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-info justify-content-between">
+                                Azul
+                                <span class="badge badge-pill badge-default">2</span>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-danger justify-content-between">
+                                Rojo
+                                <span class="badge badge-pill badge-default">3</span>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action list-group-item-warning justify-content-between">
+                                Amarillo
+                                <span class="badge badge-pill badge-default">4</span>
+                            </a>
+                        </div>
+                        <div class="list-group">
+                            <a href="" class="list-group-item list-group-item-action active">
+                                <h5 class="mb-1">Sexo</h5>
+                            </a>
+                            <a href="" class="list-group-item list-group-item-action justify-content-between">
+                                <label for="masculino" class="custom-control custom-checkbox">
+                                    <input type="checkbox" name="masculino" id="masculino" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">Masculino</span>
+                                </label>
+                                <span class="badge badge-pill badge-default">1</span>
+                            </a>
+                            <a href="" class="list-group-item list-group-item-action justify-content-between">
+                                <label for="femenino" class="custom-control custom-checkbox">
+                                    <input type="checkbox" name="femenino" id="femenino" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">Femenino</span>
+                                </label>
+                                <span class="badge badge-pill badge-default">2</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Filtros -->
+
+                <!-- Producto -->
+                <div class="col-12 col-md-9">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4 card-producto">
+                            <div class="card">
+                                <img src="images/producto1.jpg" alt="Produto 1" class="card-img-top img-fluid">
+                                <div class="card-block text-center">
+                                    <div class="rounded">
+                                        <span class="badge badge-default">¡Oferta!</span>
+                                    </div>
+                                    <h4 class="card-title">
+                                        <small><del>29.99$</del></small>&nbsp;14.99$
+                                    </h4>
+                                    <p class="card-text text-uppercase">Chemise</p>
+                                    <a href="producto1.html" class="btn btn-platzi btn-block btn-lg">
+                                        <i class="fa fa-plus"></i>
+                                        Ver mas
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 card-producto">
+                            <div class="card">
+                                <img src="images/producto2.jpg" alt="Produto 1" class="card-img-top img-fluid">
+                                <div class="card-block text-center">
+                                    <div class="rounded">
+                                        <span class="badge badge-default">¡Oferta!</span>
+                                    </div>
+                                    <h4 class="card-title">
+                                        <small><del>19.99$</del></small>&nbsp;9.99$
+                                    </h4>
+                                    <p class="card-text text-uppercase">Chemise</p>
+                                    <a href="producto2.html" class="btn btn-platzi btn-block btn-lg">
+                                        <i class="fa fa-plus"></i>
+                                        Ver mas
+                                    </a>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="col-12 col-md-6 col-lg-4 card-producto">
+                            <div class="card">
+                                <img src="images/producto7.jpg" alt="Produto 1" class="card-img-top img-fluid">
+                                <div class="card-block text-center">
+                                    <div class="rounded">
+                                        <span class="badge badge-default">¡Oferta!</span>
+                                    </div>
+                                    <h4 class="card-title">
+                                        <small><del>15.99$</del></small>&nbsp;7.99$
+                                    </h4>
+                                    <p class="card-text text-uppercase">Chaquetas</p>
+                                    <a href="producto3.html" class="btn btn-platzi btn-block btn-lg">
+                                        <i class="fa fa-plus"></i>
+                                        Ver mas
+                                    </a>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="col-12 col-md-6 col-lg-4 card-producto">
+                            <div class="card">
+                                <img src="images/producto4.jpg" alt="Produto 1" class="card-img-top img-fluid">
+                                <div class="card-block text-center">
+                                    <div class="rounded">
+                                        <span class="badge badge-default">¡Oferta!</span>
+                                    </div>
+                                    <h4 class="card-title">
+                                        <small><del>16.99$</del></small>&nbsp;5.99$
+                                    </h4>
+                                    <p class="card-text text-uppercase">pantalones</p>
+                                    <a href="producto4.html" class="btn btn-platzi btn-block btn-lg">
+                                        <i class="fa fa-plus"></i>
+                                        Ver mas
+                                    </a>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="col-12 col-md-6 col-lg-4 card-producto">
+                            <div class="card">
+                                <img src="images/producto5.jpg" alt="Produto 1" class="card-img-top img-fluid">
+                                <div class="card-block text-center">
+                                    <div class="rounded">
+                                        <span id="novedad" class="badge badge-default">¡Novedad!</span>
+                                        <span class="badge badge-default">¡Oferta!</span>
+                                    </div>
+                                    <h4 class="card-title">
+                                        <small><del>40.99$</del></small>&nbsp;20.99$
+                                    </h4>
+                                    <p class="card-text text-uppercase">chaquetas</p>
+                                    <a href="producto5.html" class="btn btn-platzi btn-block btn-lg">
+                                        <i class="fa fa-plus"></i>
+                                        Ver mas
+                                    </a>
+                                </div>
+                            </div>
+                        </div> 
+
+
+                        <div class="col-12 col-md-6 col-lg-4 card-producto">
+                            <div class="card">
+                                <img src="images/producto6.jpg" alt="Produto 1" class="card-img-top img-fluid">
+                                <div class="card-block text-center">
+                                    <div class="rounded">
+                                        <span class="badge badge-default">¡Oferta!</span>
+                                    </div>
+                                    <h4 class="card-title">
+                                        <small><del>12.99$</del></small>&nbsp;5.99$
+                                    </h4>
+                                    <p class="card-text text-uppercase">Franelas</p>
+                                    <a href="producto6.html" class="btn btn-platzi btn-block btn-lg">
+                                        <i class="fa fa-plus"></i>
+                                        Ver mas
+                                    </a>
+                                </div>
+                            </div>
+                        </div>                         
+                    </div>
+
+                    <div class="row">
+                        <div id="paginator-container" class="col-12 d-flex justify-content-center">
+                            <nav>
+                                <ul class="pagination">
+                                    <li class="page-item disabled"><a href="#" class="page-link">&laquo;</a></li>
+                                    <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                    <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Producto -->
+            </div>
+        </div>
+    </section>
+    <!-- /Productos -->
+    <!-- Modal -->
+    <div class="modal fade" id="modal-oferta">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Oferta exclusiva</h4>
+                    <button class="close" data-dismiss="modal" type="button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    Registrate hoy y recibe $15 de descuento!
+                    <form action="#" class="form">
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="tu@correo.com">
+                            <small class="form-text text-muted">No compartiremos tu información con nadie más</small>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-platzi form-text">Registrame</button>
+                    <button id="btnNoregistrar" class="btn btn-warning form-text" data-dismiss="modal">No, no quiero el descuento</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Modal -->
+
+    <!-- Footer -->
+    <footer id="footer-container">
+        <div class="container">
+            <div class="row text-center text-md-left">
+                <div class="col-md-4">
+                    <form action="" id="suscribeForm" method="POST">
+                        <h4 class="text-uppercase">¿Quieres recibir todas las novedades?</h4>
+                        <div class="form-group">
+                            <input type="email" id="email" class="form-control" placeholder="tu@correo.com">
+                            <small class="form-text text-muted">No compartiremos tu información con nadie más</small>
+                            <button type="submit" class="btn btn-primary form-text">Suscribirme</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-3 offset-md-5">
+                    <h4>Navegación</h4>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="oferta.html" class="nav-link">Catálogo</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Carritoo</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">FAQ</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    
+    <!-- build:js(.) scripts/plugins.js -->
+    <script src="/bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/alert.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/button.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/carousel.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/dropdown.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/modal.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/tab.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/tooltip.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/popover.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/util.js"></script>
+    <!-- endbuild -->
+    
+
+    <!-- build:js(.tmp) scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+    <script>
+        mostrarModal();
+    </script>
+  </body>
+</html>
