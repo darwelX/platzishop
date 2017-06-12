@@ -20,18 +20,17 @@ $form.submit(function(eve){
     el.addClass('form-control-feedback');
     $formGroup.append(el);
 });
-
-function mostrarModal(){
-    $('#btnNoregistrar').click( function(eve){
+function mostrarModal(){ // eslint-disable-line no-func-assign, no-unused-vars
+    $('#btnNoregistrar').click( function(eve){ // eslint-disable-line no-unused-vars
         localStorage.noMostrarModal = true;
     });
-    const mostrar = (localStorage.noMostrarModal != 'undefined')? localStorage.noMostrarModal:"false";
+    const mostrar = (localStorage.noMostrarModal != 'undefined')? localStorage.noMostrarModal:'false';
     if(!mostrar){
         // {backdrop: 'static', keyboard: false} evita que al realizar  click fuera de la ventana esta no se cierre
         $('#modal-oferta').modal({backdrop: 'static', keyboard: false});
     }
 }
-var mediaquery = window.matchMedia("(max-width: 576px)");
+var mediaquery = window.matchMedia('(max-width: 576px)');
 
 function handleOrientationChange(mediaquery) {
     if (mediaquery.matches){
