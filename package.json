@@ -34,7 +34,8 @@
     "start": "grunt serve",
     "build": "grunt",
     "lint": "grunt eslint",
-    "clean": "grunt clean:dist"
+    "clean": "grunt clean:dist",
+    "lintf": "grunt eslint:target --force"
   },
   "eslintConfig": {
     "extends": [
