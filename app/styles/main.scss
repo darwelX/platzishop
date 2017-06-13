@@ -1,6 +1,6 @@
 $enable-flex: true;
 
-$fa-font-path: "../bower_components/components-font-awesome/fonts";
+$fa-font-path: "../../bower_components/components-font-awesome/fonts";
 
 
 // bower:scss
@@ -132,7 +132,7 @@ input.form-control:focus {
     padding-right: 1em;
 }
 .search-icon{
-    background-image:url('../images/svg/search.svg') ;
+    background-image:url('../images/search.svg') ;
     background-repeat: no-repeat;
     background-size: 20px 20px; 
     text-align: right;
