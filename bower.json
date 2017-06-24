@@ -9,5 +9,17 @@
   "devDependencies": {
     "chai": "^4.0.2",
     "mocha": "^3.4.2"
-  }
+  },
+ "overrides": {
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css",
+        "fonts/fontawesome-webfont.eot",
+        "fonts/fontawesome-webfont.svg",
+        "fonts/fontawesome-webfont.ttf",
+        "fonts/fontawesome-webfont.woff",
+        "fonts/fontawesome-webfont.woff2"
+      ]
+    }    
+  }  
 }
